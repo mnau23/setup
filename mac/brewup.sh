@@ -22,4 +22,8 @@ brew upgrade --cask --greedy
 printf "${TEXTCOLOR}Checking for problems...\n"
 brew doctor
 
+# Upgrade pip
+printf "${TEXTCOLOR}Upgrading pip...\n"
+python3  -m pip install --upgrade pip
+
 printf "${TEXTCOLOR}Done!\n"
