@@ -4,7 +4,11 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
+tap "homebrew/services"
 tap "int128/kubelogin"
+tap "mongodb/brew"
+# Distributed revision control system
+brew "git"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Kubernetes command-line interface
@@ -13,10 +17,14 @@ brew "kubernetes-cli"
 brew "kube-ps1"
 # Tool that can switch between kubectl contexts easily and create aliases
 brew "kubectx"
+# Postgres C API library
+brew "libpq"
 # Apache Kafka C/C++ library
 brew "librdkafka"
 # Mac App Store command-line interface
 brew "mas"
+# Open source relational database management system
+brew "mysql"
 # Manage multiple Node.js versions
 brew "nvm"
 # Development kit for the Java programming language
@@ -24,7 +32,7 @@ brew "openjdk"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
 # Object-relational database system
-brew "postgresql"
+brew "postgresql@14"
 # Python version management
 brew "pyenv"
 # Powerful, clean, object-oriented scripting language
@@ -41,6 +49,8 @@ brew "codefresh-io/cli/codefresh"
 brew "coursier/formulas/coursier"
 # A kubectl plugin for Kubernetes OpenID Connect authentication
 brew "int128/kubelogin/kubelogin"
+# High-performance, schema-free, document-oriented database
+brew "mongodb/brew/mongodb-community"
 # Web browser focusing on privacy
 cask "brave-browser"
 # Universal database tool and SQL client
@@ -57,12 +67,16 @@ cask "intellij-idea-ce"
 cask "iterm2"
 # Kubernetes IDE
 cask "lens"
+# Syncs files between computers and MEGA Cloud drives
+cask "megasync"
 # Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
 # Explore and manipulate your MongoDB data
 cask "mongodb-compass"
 # App to write, plan, collaborate, and get organized
 cask "notion"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
 # Collaboration platform for API development
 cask "postman"
 # IDE for Python programming - Community Edition
@@ -77,8 +91,8 @@ cask "spotify"
 cask "temurin11"
 # JDK from the Eclipse Foundation (Adoptium)
 cask "temurin8"
-# Customizable email client
-cask "thunderbird"
+# Unpacks archive files
+cask "the-unarchiver"
 # Open-source code editor
 cask "visual-studio-code"
 # Multimedia player

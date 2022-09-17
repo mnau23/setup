@@ -1,11 +1,11 @@
+zstyle ':omz:update' mode auto      # update automatically without asking
+
 ##############################
   Useful functions and tools
 ##############################
 
-
 # Fish-like autosuggestions
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 
 # Update Homebrew and its packages/casks
 # EG: brewup
@@ -14,10 +14,10 @@ brewup() {
   brew update && echo
   printf "Upgrading outdated packages...\n"
   brew upgrade && echo
-  printf "Cleaning cache...\n"
-  brew cleanup --prune=0 -s && echo
   printf "Upgrading casks...\n"
   brew upgrade --cask --greedy && echo
+  printf "Cleaning cache...\n"
+  brew cleanup --prune=0 -s && echo
   printf "Checking for problems...\n"
   brew doctor
   echo && printf "Upgrading pip...\n"
@@ -25,13 +25,12 @@ brewup() {
   printf "Done!\n"
 }
 
-
 # Switch between different Java versions
 # EG: jdk 11
 jdk() {
-        version=$1
-        export JAVA_HOME=$(/usr/libexec/java_home -v"$version");
-        java -version
+  version=$1
+  export JAVA_HOME=$(/usr/libexec/java_home -v"$version");
+  java -version
 }
 
 
@@ -55,3 +54,13 @@ jwt() {
     fi
   done
 }
+
+# Aliases
+alias gfp='git fetch && git pull'
+alias gl='git log'
+alias gpl='git pull'
+alias gps='git push'
+alias pretty="git log --graph --pretty='%Cred%h%Creset %Cgreen(%ad) %C(bold blue)<%an>%Creset -%C(yellow)%d%Creset %s' --date=short --abbrev-commit"
+alias prettys="git log --graph --pretty='%Cred%h%Creset %Cgreen(%ad) %C(bold blue)<%an>%Creset -%C(yellow)%d%Creset %s' --date=short --stat"
+
+alias remindall='less ~/.oh-my-zsh/plugins/git/git.plugin.zsh'
