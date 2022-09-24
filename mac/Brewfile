@@ -67,6 +67,8 @@ cask "intellij-idea-ce"
 cask "iterm2"
 # Kubernetes IDE
 cask "lens"
+# Full TeX Live distribution with GUI applications
+cask "mactex"
 # Syncs files between computers and MEGA Cloud drives
 cask "megasync"
 # Meet, chat, call, and collaborate in just one place

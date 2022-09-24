@@ -1,5 +1,6 @@
 # Setup
-Some configuration files and scripts to automatically install everything I need.
+> Some configuration files and scripts to automatically install everything I need.
+
 
 ## MacOS
 
