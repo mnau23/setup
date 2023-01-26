@@ -9,8 +9,12 @@ tap "int128/kubelogin"
 tap "mongodb/brew"
 # Distributed revision control system
 brew "git"
+# Kubernetes package manager
+brew "helm"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Kubernetes CLI To Manage Your Clusters In Style!
+brew "k9s"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
 # Kubernetes prompt info for bash and zsh
@@ -53,14 +57,14 @@ brew "int128/kubelogin/kubelogin"
 brew "mongodb/brew/mongodb-community"
 # Web browser focusing on privacy
 cask "brave-browser"
+# Tool to remove unnecessary files and folders from disk
+cask "cleanmymac"
 # Universal database tool and SQL client
 cask "dbeaver-community"
 # App to build and share containerized applications and microservices
 cask "docker"
 # Web browser
 cask "firefox"
-# Web browser
-cask "google-chrome"
 # IDE for Java development - community edition
 cask "intellij-idea-ce"
 # Terminal emulator as alternative to Apple's Terminal app

@@ -56,11 +56,21 @@ jwt() {
 }
 
 # Aliases
+
+### RANDOM
+alias remindall='less ~/.oh-my-zsh/plugins/git/git.plugin.zsh'
+alias out='cd ..'
+### GIT
 alias gfp='git fetch && git pull'
 alias gl='git log'
 alias gpl='git pull'
 alias gps='git push'
 alias pretty="git log --graph --pretty='%Cred%h%Creset %Cgreen(%ad) %C(bold blue)<%an>%Creset -%C(yellow)%d%Creset %s' --date=short --abbrev-commit"
 alias prettys="git log --graph --pretty='%Cred%h%Creset %Cgreen(%ad) %C(bold blue)<%an>%Creset -%C(yellow)%d%Creset %s' --date=short --stat"
-
-alias remindall='less ~/.oh-my-zsh/plugins/git/git.plugin.zsh'
+### KUBERNETES
+alias kdelete='kubectl delete'
+alias kdepl='kubectl get deployments'
+alias klogs='kubectl logs'
+alias kpods='kubectl get pods'
+alias king='kubectl get ingress'
+alias ksec='kubectl get secrets'
