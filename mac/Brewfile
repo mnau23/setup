@@ -7,6 +7,9 @@ tap "homebrew/core"
 tap "homebrew/services"
 tap "int128/kubelogin"
 tap "mongodb/brew"
+tap "noovolari/brew"
+# Official Amazon AWS command-line interface
+brew "awscli"
 # Distributed revision control system
 brew "git"
 # Kubernetes package manager
@@ -55,6 +58,8 @@ brew "coursier/formulas/coursier"
 brew "int128/kubelogin/kubelogin"
 # High-performance, schema-free, document-oriented database
 brew "mongodb/brew/mongodb-community"
+# Install Leapp CLI
+brew "noovolari/brew/leapp-cli-darwin-arm64"
 # Web browser focusing on privacy
 cask "brave-browser"
 # Tool to remove unnecessary files and folders from disk
@@ -69,6 +74,8 @@ cask "firefox"
 cask "intellij-idea-ce"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Cloud credentials manager
+cask "leapp"
 # Kubernetes IDE
 cask "lens"
 # Full TeX Live distribution with GUI applications
