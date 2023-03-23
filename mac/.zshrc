@@ -1,20 +1,44 @@
-# Auto-update behavior
-zstyle ':omz:update' mode auto      # update automatically without asking
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
 
+# Theme
+ZSH_THEME="robbyrussell"
+
+# Auto-update behavior
+zstyle ':omz:update' mode auto    # update automatically without asking
+zstyle ':omz:update' frequency 7  # check weekly for updates
+
+# Plugins
 plugins=(
-	git
+  autoupdate
+  git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
+
+######################################################################
+                           # INSTALLATION #                           
+######################################################################
+
+# Node Version Manager
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Python Version Management
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+
+# Package manager for kubectl plugins
+export PATH="$HOME/.krew/bin:$PATH"
 
 ######################################################################
                               # USEFUL #                              
 ######################################################################
 
 export HOMEBREW_BREWFILE=~/<path>/Brewfile
-
-# Fish-like autosuggestions
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Update Homebrew and its packages/casks
 # EG: brewup
@@ -38,8 +62,7 @@ alias brewup=homebrewUpdater
 # Switch between different Java versions
 # EG: jdk <version_number>
 function setJdkVersion() {
-  version=$1
-  export JAVA_HOME=$(/usr/libexec/java_home -v"$version");
+  export JAVA_HOME=$(/usr/libexec/java_home -v"$1");
   java -version
 }
 alias jdk=setJdkVersion
@@ -66,10 +89,27 @@ function jwtTokenDecoder() {
 }
 alias jwtdecode=jwtTokenDecoder
 
+# Find and decode a secret based on current context and namespace
+# EG: kubedecode <secret_name> <key_name>
+function getDecodedSecret() {
+  secret_name=$1
+  key_name=$2
+  kubectl get secrets $secret_name -o yaml | rg $key_name | grep -v "{" | sed 's/ * //g' | awk -F ":" '{printf($1": "); system("echo " $2 " | base64 -d");
+  printf("\n")}'
+}
+alias kubedecode=getDecodedSecret
+
+# Copy secret between namespaces
+# EG: copy-secret <secret_name> <source_ns> <dest_ns>
+function copySecretInNamespace() {
+  kubectl neat get -- secret "$1" --namespace="$2" -o json | jq 'del(.metadata.namespace)' | kubectl apply --namespace=$3 -f -;
+}
+alias copy-secret=copySecretInNamespace
+
 # Backup files in Obsidian Vault
 # EG: obsidian-backup
 function backupObsidianVaultToGithub() {
-  cd "~/path/obsidian-vault"
+  cd ~/<path>/obsidian-vault
   git add .
   now="`date +'%Y-%m-%d %H:%M'`"
   msg="vault backup $now" # vault backup YYYY-MM-DD HH:mm
@@ -94,7 +134,8 @@ alias prettys="git log --graph --pretty='%Cred%h%Creset %Cgreen(%ad) %C(bold blu
 ### KUBERNETES
 alias kdelete="kubectl delete"
 alias kdepl="kubectl get deployments"
-alias klogs="kubectl logs"
-alias kpods="kubectl get pods"
 alias king="kubectl get ingress"
+alias klogs="kubectl logs"
+alias knds="kubectl get nodes"
+alias kpods="kubectl get pods"
 alias ksec="kubectl get secrets"
