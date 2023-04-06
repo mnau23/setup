@@ -1,0 +1,74 @@
+tap "coursier/formulas"
+tap "homebrew/bundle"
+tap "homebrew/cask-versions"
+# Distributed revision control system
+brew "git"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# General-purpose data compression with high compression ratio
+brew "xz"
+# Mac App Store command-line interface
+brew "mas"
+# Platform built on V8 to build network applications
+brew "node"
+# Python version management
+brew "pyenv"
+# Build tool for Scala projects
+brew "sbt"
+# Launcher for Coursier
+brew "coursier/formulas/coursier"
+# Menu bar tool to limit maximum charging percentage
+cask "aldente"
+# Web browser focusing on privacy
+cask "brave-browser"
+# IDE for Java development - community edition
+cask "intellij-idea-ce"
+# Terminal emulator as alternative to Apple's Terminal app
+cask "iterm2"
+# Clipboard manager
+cask "maccy"
+# Syncs files between computers and MEGA Cloud drives
+cask "megasync"
+# Provides updates to various Microsoft products
+cask "microsoft-auto-update"
+# Spreadsheet software
+cask "microsoft-excel"
+# Presentation software
+cask "microsoft-powerpoint"
+# Meet, chat, call, and collaborate in just one place
+cask "microsoft-teams"
+# Word processor
+cask "microsoft-word"
+# App to write, plan, collaborate, and get organized
+cask "notion"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
+# IDE for Python programming - Community Edition
+cask "pycharm-ce"
+# Peer to peer Bitorrent client
+cask "qbittorrent"
+# Archive manager for data compression and backups
+cask "rar"
+# Move and resize windows using keyboard shortcuts or snap areas
+cask "rectangle"
+# Team communication and collaboration software
+cask "slack"
+# Music streaming service
+cask "spotify"
+# Messaging app with a focus on speed and security
+cask "telegram"
+# JDK from the Eclipse Foundation (Adoptium)
+cask "temurin11"
+# JDK from the Eclipse Foundation (Adoptium)
+cask "temurin8"
+# Unpacks archive files
+cask "the-unarchiver"
+# To-do list
+cask "todoist"
+# Open-source code editor
+cask "visual-studio-code"
+# Multimedia player
+cask "vlc"
+# Video communication and virtual meeting platform
+cask "zoom"
+mas "iMovie", id: 408981434
