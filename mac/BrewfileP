@@ -65,6 +65,8 @@ cask "temurin8"
 cask "the-unarchiver"
 # To-do list
 cask "todoist"
+# Development environment
+cask "vagrant"
 # Open-source code editor
 cask "visual-studio-code"
 # Multimedia player

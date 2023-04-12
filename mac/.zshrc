@@ -137,6 +137,11 @@ alias obsidian-backup=backupObsidianVaultToGithub
 alias out="cd .."
 alias remindall="less ~/.oh-my-zsh/plugins/git/git.plugin.zsh"
 alias zip="zip -x '*.DS_Store' -vr"
+### DJANGO
+alias dj="python manage.py"
+alias djm="python manage.py migrate"
+alias djmkm="python manage.py makemigrations"
+alias djrs="python manage.py runserver"
 ### GIT
 alias gfp="git fetch && git pull"
 alias gl="git log"

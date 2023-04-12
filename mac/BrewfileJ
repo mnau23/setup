@@ -1,6 +1,7 @@
 tap "auth0/auth0-cli"
 tap "codefresh-io/cli"
 tap "coursier/formulas"
+tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
@@ -69,6 +70,8 @@ brew "auth0/auth0-cli/auth0"
 brew "codefresh-io/cli/codefresh"
 # Launcher for Coursier
 brew "coursier/formulas/coursier"
+# Terraform
+brew "hashicorp/tap/terraform"
 # A kubectl plugin for Kubernetes OpenID Connect authentication
 brew "int128/kubelogin/kubelogin"
 # High-performance, schema-free, document-oriented database
