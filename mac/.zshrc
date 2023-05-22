@@ -111,12 +111,26 @@ function getDecodedSecret() {
 }
 alias kubedecode=getDecodedSecret
 
-# Copy secret between namespaces
+# Copy secret between namespaces in the same cluster
 # EG: copy-secret <secret_name> <source_ns> <dest_ns>
 function copySecretInNamespace() {
   kubectl neat get -- secret "$1" --namespace="$2" -o json | jq 'del(.metadata.namespace)' | kubectl apply --namespace=$3 -f -;
 }
 alias copy-secret=copySecretInNamespace
+
+# Scale deployment to a specific number of replicas in a namespace
+# EG: ks <replicas_nr> <deployment_name>
+function scaleDeployment() {
+  kubectl scale --replicas=$1 deployment $2
+}
+alias ks=scaleDeployment
+
+# Delete a specific group of pods - used to cleanup pods with the same status
+# EG: kdl_pods <pod_status>
+function deletePodsInNamespace() {
+  kubectl get pods | grep $1 | cut -d' ' -f 1 | xargs kubectl delete pod
+}
+alias kdl_pods=deletePodsInNamespace
 
 # Backup files in Obsidian Vault
 # EG: obsidian-backup
@@ -142,6 +156,10 @@ alias dj="python manage.py"
 alias djm="python manage.py migrate"
 alias djmkm="python manage.py makemigrations"
 alias djrs="python manage.py runserver"
+### DOCKER
+alias d="docker"
+alias dcon="docker container"
+alias dimg="docker image"
 ### GIT
 alias gfp="git fetch && git pull"
 alias gl="git log"
@@ -150,10 +168,22 @@ alias gps="git push"
 alias pretty="git log --graph --pretty='%Cred%h%Creset %Cgreen(%ad) %C(bold blue)<%an>%Creset -%C(yellow)%d%Creset %s' --date=short --abbrev-commit"
 alias prettys="git log --graph --pretty='%Cred%h%Creset %Cgreen(%ad) %C(bold blue)<%an>%Creset -%C(yellow)%d%Creset %s' --date=short --stat"
 ### KUBERNETES
-alias kdelete="kubectl delete"
+alias k="kubectl"
+alias ka="kubectl apply"
+alias kdl="kubectl delete"
+alias kds="kubectl describe"
+alias kg="kubectl get"
+alias kl="kubectl logs"
+# ---
+alias kcron="kubectl get cronjob"
 alias kdepl="kubectl get deployments"
 alias king="kubectl get ingress"
-alias klogs="kubectl logs"
-alias knds="kubectl get nodes"
+alias knodes="kubectl get nodes"
 alias kpods="kubectl get pods"
 alias ksec="kubectl get secrets"
+### LEAPP
+alias llist="leapp session list"
+alias lstart="leapp session start"
+alias lstop="leapp session stop"
+### TERRAFORM
+alias tf="terraform"
