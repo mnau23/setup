@@ -3,9 +3,7 @@ tap "codefresh-io/cli"
 tap "coursier/formulas"
 tap "hashicorp/tap"
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-versions"
-tap "homebrew/core"
 tap "homebrew/services"
 tap "int128/kubelogin"
 tap "mongodb/brew"
@@ -78,6 +76,8 @@ brew "int128/kubelogin/kubelogin"
 brew "mongodb/brew/mongodb-community"
 # Install Leapp CLI
 brew "noovolari/brew/leapp-cli-darwin-arm64"
+# Menu bar icon organizer
+cask "bartender"
 # Web browser focusing on privacy
 cask "brave-browser"
 # Tool to remove unnecessary files and folders from disk
@@ -94,6 +94,8 @@ cask "iterm2"
 cask "leapp"
 # Kubernetes IDE
 cask "lens"
+# Clipboard manager
+cask "maccy"
 # Full TeX Live distribution with GUI applications
 cask "mactex"
 # Syncs files between computers and MEGA Cloud drives
@@ -128,3 +130,18 @@ cask "visual-studio-code"
 cask "vlc"
 # Video communication and virtual meeting platform
 cask "zoom"
+vscode "aaron-bond.better-comments"
+vscode "cssho.vscode-svgviewer"
+vscode "dbaeumer.vscode-eslint"
+vscode "deerawan.vscode-faker"
+vscode "donjayamanne.githistory"
+vscode "esbenp.prettier-vscode"
+vscode "GraphQL.vscode-graphql"
+vscode "GraphQL.vscode-graphql-execution"
+vscode "GraphQL.vscode-graphql-syntax"
+vscode "hashicorp.terraform"
+vscode "ms-azuretools.vscode-docker"
+vscode "ms-vscode-remote.remote-containers"
+vscode "ritwickdey.LiveServer"
+vscode "shd101wyy.markdown-preview-enhanced"
+vscode "waderyan.gitblame"

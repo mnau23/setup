@@ -16,6 +16,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 zstyle ':omz:update' mode auto    # update automatically without asking
 zstyle ':omz:update' frequency 7  # check weekly for updates
 
+ENABLE_CORRECTION="true"
+
 # Plugins
 plugins=(
   autoupdate
@@ -31,29 +33,35 @@ source $ZSH/oh-my-zsh.sh
 ######################################################################
 
 # Powerlevel10k
-### To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+## To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Node Version Manager
+# Homebrew
+export PATH="/opt/homebrew/bin:$PATH"
+
+# krew - package manager for kubectl plugins
+export PATH="$HOME/.krew/bin:$PATH"
+
+# nvm - Node Version Manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Python Version Management
+# pyenv - Python Version Management
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 
-# Package manager for kubectl plugins
-export PATH="$HOME/.krew/bin:$PATH"
+# Poetry
+export PATH="$HOME/.poetry/bin:$PATH"
 
 ######################################################################
                               # USEFUL #                              
 ######################################################################
 
-export HOMEBREW_BREWFILE=~/<path>/Brewfile
+export HOMEBREW_BREWFILE=~/<CUSTOM_PATH>/Brewfile
 
 # Update Homebrew and its packages/casks
-# EG: brewup
+## eg: brewup
 function homebrewUpdater() {
   printf "Updating homebrew and local base of packages and versions...\n"
   brew update && echo
@@ -72,7 +80,7 @@ function homebrewUpdater() {
 alias brewup=homebrewUpdater
 
 # Switch between different Java versions
-# EG: jdk <version_number>
+## eg: jdk <version_number>
 function setJdkVersion() {
   export JAVA_HOME=$(/usr/libexec/java_home -v"$1");
   java -version
@@ -80,7 +88,7 @@ function setJdkVersion() {
 alias jdk=setJdkVersion
 
 # JWT decoder
-# EG: jwt "<example>"
+## eg: jwt "<example>"
 function jwtTokenDecoder() {
   for part in 1 2; do
     b64="$(cut -f$part -d. <<< "$1" | tr '_-' '/+')"
@@ -102,7 +110,7 @@ function jwtTokenDecoder() {
 alias jwtdecode=jwtTokenDecoder
 
 # Find and decode a secret based on current context and namespace
-# EG: kubedecode <secret_name> <key_name>
+## eg: kubedecode <secret_name> <key_name>
 function getDecodedSecret() {
   secret_name=$1
   key_name=$2
@@ -112,30 +120,43 @@ function getDecodedSecret() {
 alias kubedecode=getDecodedSecret
 
 # Copy secret between namespaces in the same cluster
-# EG: copy-secret <secret_name> <source_ns> <dest_ns>
+## eg: copy-secret <secret_name> <source_ns> <dest_ns>
 function copySecretInNamespace() {
   kubectl neat get -- secret "$1" --namespace="$2" -o json | jq 'del(.metadata.namespace)' | kubectl apply --namespace=$3 -f -;
 }
 alias copy-secret=copySecretInNamespace
 
 # Scale deployment to a specific number of replicas in a namespace
-# EG: ks <replicas_nr> <deployment_name>
+## eg: ks <replicas_nr> <deployment_name>
 function scaleDeployment() {
   kubectl scale --replicas=$1 deployment $2
 }
 alias ks=scaleDeployment
 
-# Delete a specific group of pods - used to cleanup pods with the same status
-# EG: kdl_pods <pod_status>
+# Delete a specific group of pods (used to cleanup pods with the same status)
+## eg: kdl_pods <pod_status>
 function deletePodsInNamespace() {
   kubectl get pods | grep $1 | cut -d' ' -f 1 | xargs kubectl delete pod
 }
 alias kdl_pods=deletePodsInNamespace
 
+# Disable or enable a cronjob
+## eg: kp_cronjob <disable|enable> <cronjob_name>
+function changeCronjobStatus() {
+  if [[ $1 == "disable" || $1 == "d" ]]; then
+    kubectl patch cronjob $2 -p '{"spec" : {"suspend" : true }}'
+  elif [[ $1 == "enable" || $1 == "e" ]]; then
+    kubectl patch cronjob $2 -p '{"spec" : {"suspend" : false }}'
+  else
+    printf "Missing or wrong argument(s)...\nUsage: kp_cronjob <disable|enable> <cronjob_name>\n"
+  fi
+}
+alias kp_cronjob=changeCronjobStatus
+
 # Backup files in Obsidian Vault
-# EG: obsidian-backup
+## eg: obsidian-backup
 function backupObsidianVaultToGithub() {
-  cd ~/<path>/obsidian-vault
+  cd ~/<CUSTOM_PATH>/obsidian-vault
   git add .
   now="`date +'%Y-%m-%d %H:%M'`"
   msg="vault backup $now" # vault backup YYYY-MM-DD HH:mm
@@ -145,29 +166,31 @@ function backupObsidianVaultToGithub() {
 }
 alias obsidian-backup=backupObsidianVaultToGithub
 
-# Aliases
+#####################################################################
+                              # ALIAS #                              
+#####################################################################
 
-### RANDOM
+## random
 alias out="cd .."
 alias remindall="less ~/.oh-my-zsh/plugins/git/git.plugin.zsh"
 alias zip="zip -x '*.DS_Store' -vr"
-### DJANGO
+## Django
 alias dj="python manage.py"
 alias djm="python manage.py migrate"
 alias djmkm="python manage.py makemigrations"
 alias djrs="python manage.py runserver"
-### DOCKER
+## Docker
 alias d="docker"
 alias dcon="docker container"
 alias dimg="docker image"
-### GIT
+## Git
 alias gfp="git fetch && git pull"
 alias gl="git log"
 alias gpl="git pull"
 alias gps="git push"
 alias pretty="git log --graph --pretty='%Cred%h%Creset %Cgreen(%ad) %C(bold blue)<%an>%Creset -%C(yellow)%d%Creset %s' --date=short --abbrev-commit"
 alias prettys="git log --graph --pretty='%Cred%h%Creset %Cgreen(%ad) %C(bold blue)<%an>%Creset -%C(yellow)%d%Creset %s' --date=short --stat"
-### KUBERNETES
+## Kubernetes
 alias k="kubectl"
 alias ka="kubectl apply"
 alias kdl="kubectl delete"
@@ -181,9 +204,9 @@ alias king="kubectl get ingress"
 alias knodes="kubectl get nodes"
 alias kpods="kubectl get pods"
 alias ksec="kubectl get secrets"
-### LEAPP
+## Leapp
 alias llist="leapp session list"
 alias lstart="leapp session start"
 alias lstop="leapp session stop"
-### TERRAFORM
+## Terraform
 alias tf="terraform"

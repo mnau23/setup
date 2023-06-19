@@ -19,6 +19,10 @@ brew "sbt"
 brew "coursier/formulas/coursier"
 # Menu bar tool to limit maximum charging percentage
 cask "aldente"
+# Chromium based browser
+cask "arc"
+# Menu bar icon organizer
+cask "bartender"
 # Web browser focusing on privacy
 cask "brave-browser"
 # IDE for Java development - community edition
@@ -74,3 +78,11 @@ cask "vlc"
 # Video communication and virtual meeting platform
 cask "zoom"
 mas "iMovie", id: 408981434
+vscode "Equinusocio.vsc-community-material-theme"
+vscode "equinusocio.vsc-material-theme-icons"
+vscode "esbenp.prettier-vscode"
+vscode "glenn2223.live-sass"
+vscode "ms-azuretools.vscode-docker"
+vscode "ritwickdey.LiveServer"
+vscode "shd101wyy.markdown-preview-enhanced"
+vscode "waderyan.gitblame"
