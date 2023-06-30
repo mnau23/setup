@@ -22,6 +22,7 @@ ENABLE_CORRECTION="true"
 plugins=(
   autoupdate
   git
+  kubectl
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
@@ -191,12 +192,7 @@ alias gps="git push"
 alias pretty="git log --graph --pretty='%Cred%h%Creset %Cgreen(%ad) %C(bold blue)<%an>%Creset -%C(yellow)%d%Creset %s' --date=short --abbrev-commit"
 alias prettys="git log --graph --pretty='%Cred%h%Creset %Cgreen(%ad) %C(bold blue)<%an>%Creset -%C(yellow)%d%Creset %s' --date=short --stat"
 ## Kubernetes
-alias k="kubectl"
-alias ka="kubectl apply"
-alias kdl="kubectl delete"
-alias kds="kubectl describe"
-alias kg="kubectl get"
-alias kl="kubectl logs"
+alias kdes="kubectl describe"
 # ---
 alias kcron="kubectl get cronjob"
 alias kdepl="kubectl get deployments"
