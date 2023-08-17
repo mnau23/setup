@@ -21,10 +21,10 @@ brew "coursier/formulas/coursier"
 cask "aldente"
 # Chromium based browser
 cask "arc"
-# Menu bar icon organizer
-cask "bartender"
 # Web browser focusing on privacy
 cask "brave-browser"
+# Utility to hide menu bar items
+cask "hiddenbar"
 # IDE for Java development - community edition
 cask "intellij-idea-ce"
 # Terminal emulator as alternative to Apple's Terminal app

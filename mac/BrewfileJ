@@ -8,6 +8,8 @@ tap "homebrew/services"
 tap "int128/kubelogin"
 tap "mongodb/brew"
 tap "noovolari/brew"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
 # C parser in Python
 brew "pycparser"
 # Official Amazon AWS command-line interface
@@ -46,8 +48,6 @@ brew "mas"
 brew "mysql"
 # Manage multiple Node.js versions
 brew "nvm"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@3"
 # Object-relational database system
 brew "postgresql@14"
 # Python version management
@@ -62,7 +62,7 @@ brew "rustup-init"
 brew "sbt"
 # Executes a program periodically, showing output fullscreen
 brew "watch"
-# Auth0 command-line tool to supercharge your developer workflow
+# Build, manage and test your Auth0 integrations from the command line
 brew "auth0/auth0-cli/auth0"
 # Codefresh CLI provides a full and flexible interface to interact with Codefresh.
 brew "codefresh-io/cli/codefresh"
@@ -76,8 +76,6 @@ brew "int128/kubelogin/kubelogin"
 brew "mongodb/brew/mongodb-community"
 # Install Leapp CLI
 brew "noovolari/brew/leapp-cli-darwin-arm64"
-# Menu bar icon organizer
-cask "bartender"
 # Web browser focusing on privacy
 cask "brave-browser"
 # Tool to remove unnecessary files and folders from disk
@@ -86,6 +84,10 @@ cask "cleanmymac"
 cask "dbeaver-community"
 # App to build and share containerized applications and microservices
 cask "docker"
+# Utility to hide menu bar items
+cask "hiddenbar"
+# HTTP and GraphQL Client
+cask "insomnia"
 # IDE for Java development - community edition
 cask "intellij-idea-ce"
 # Terminal emulator as alternative to Apple's Terminal app
@@ -102,7 +104,7 @@ cask "mactex"
 cask "megasync"
 # Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
-# Explore and manipulate your MongoDB data
+# Interactive tool for analyzing MongoDB data
 cask "mongodb-compass"
 # App to write, plan, collaborate, and get organized
 cask "notion"
@@ -131,6 +133,8 @@ cask "vlc"
 # Video communication and virtual meeting platform
 cask "zoom"
 vscode "aaron-bond.better-comments"
+vscode "bierner.markdown-mermaid"
+vscode "bpruitt-goddard.mermaid-markdown-syntax-highlighting"
 vscode "cssho.vscode-svgviewer"
 vscode "dbaeumer.vscode-eslint"
 vscode "deerawan.vscode-faker"
