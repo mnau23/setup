@@ -1,8 +1,9 @@
+[core]
+	autocrlf = input # ensure line endings in files you checkout are correct for macOS
+	editor = vim
+	excludesfile = /Users/<USER>/.gitignore_global
 [init]
 	defaultBranch = main
-[core]
-	excludesfile = /Users/<USER>/.gitignore_global
-	autocrlf = input # ensure line endings in files you checkout are correct for macOS
 [pull]
 	rebase = true
 [push]
