@@ -13,8 +13,12 @@ brew "mas"
 brew "node"
 # Python version management
 brew "pyenv"
+# Rust toolchain installer
+brew "rustup-init"
 # Build tool for Scala projects
 brew "sbt"
+# Vi 'workalike' with many additional features
+brew "vim"
 # Launcher for Coursier
 brew "coursier/formulas/coursier"
 # Menu bar tool to limit maximum charging percentage

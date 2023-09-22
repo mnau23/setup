@@ -55,6 +55,14 @@ eval "$(pyenv init -)"
 # Poetry
 export PATH="$HOME/.poetry/bin:$PATH"
 
+# Confluent Kafka for Python
+export C_INCLUDE_PATH="/opt/homebrew/Cellar/librdkafka/2.2.0/include/"
+export LIBRARY_PATH="/opt/homebrew/Cellar/librdkafka/2.2.0/lib:$LIBRARY_PATH"
+
+# Kubernetes - helper for cluster/namespace in terminal (https://github.com/jonmosco/kube-ps1)
+source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh";
+export PROMPT='$(kube_ps1)'$PROMPT;
+
 ######################################################################
                               # USEFUL #                              
 ######################################################################
@@ -172,18 +180,24 @@ alias obsidian-backup=backupObsidianVaultToGithub
 #####################################################################
 
 ## random
+alias lsa="ls -a"
 alias out="cd .."
 alias remindall="less ~/.oh-my-zsh/plugins/git/git.plugin.zsh"
+alias rm="rm -i"
+alias rmf="rm -rfi"
 alias zip="zip -x '*.DS_Store' -vr"
+
 ## Django
 alias dj="python manage.py"
 alias djm="python manage.py migrate"
 alias djmkm="python manage.py makemigrations"
 alias djrs="python manage.py runserver"
+
 ## Docker
 alias d="docker"
 alias dcon="docker container"
 alias dimg="docker image"
+
 ## Git
 alias gfp="git fetch && git pull"
 alias gl="git log"
@@ -191,6 +205,7 @@ alias gpl="git pull"
 alias gps="git push"
 alias pretty="git log --graph --pretty='%Cred%h%Creset %Cgreen(%ad) %C(bold blue)<%an>%Creset -%C(yellow)%d%Creset %s' --date=short --abbrev-commit"
 alias prettys="git log --graph --pretty='%Cred%h%Creset %Cgreen(%ad) %C(bold blue)<%an>%Creset -%C(yellow)%d%Creset %s' --date=short --stat"
+
 ## Kubernetes
 alias kdes="kubectl describe"
 # ---
@@ -200,9 +215,11 @@ alias king="kubectl get ingress"
 alias knodes="kubectl get nodes"
 alias kpods="kubectl get pods"
 alias ksec="kubectl get secrets"
+
 ## Leapp
 alias llist="leapp session list"
 alias lstart="leapp session start"
 alias lstop="leapp session stop"
+
 ## Terraform
 alias tf="terraform"
