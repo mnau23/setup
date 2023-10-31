@@ -1,6 +1,7 @@
 tap "coursier/formulas"
 tap "homebrew/bundle"
 tap "homebrew/cask-versions"
+tap "homebrew/services"
 # Distributed revision control system
 brew "git"
 # Lightweight and flexible command-line JSON processor
@@ -9,8 +10,12 @@ brew "jq"
 brew "xz"
 # Mac App Store command-line interface
 brew "mas"
+# Open source relational database management system
+brew "mysql"
 # Platform built on V8 to build network applications
 brew "node"
+# Object-relational database system
+brew "postgresql@15"
 # Python version management
 brew "pyenv"
 # Rust toolchain installer
@@ -27,6 +32,10 @@ cask "aldente"
 cask "arc"
 # Web browser focusing on privacy
 cask "brave-browser"
+# Universal database tool and SQL client
+cask "dbeaver-community"
+# App to build and share containerized applications and microservices
+cask "docker"
 # Utility to hide menu bar items
 cask "hiddenbar"
 # IDE for Java development - community edition
@@ -82,6 +91,7 @@ cask "vlc"
 # Video communication and virtual meeting platform
 cask "zoom"
 mas "iMovie", id: 408981434
+vscode "EditorConfig.EditorConfig"
 vscode "Equinusocio.vsc-community-material-theme"
 vscode "equinusocio.vsc-material-theme-icons"
 vscode "esbenp.prettier-vscode"

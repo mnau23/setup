@@ -8,10 +8,10 @@ tap "homebrew/services"
 tap "int128/kubelogin"
 tap "mongodb/brew"
 tap "noovolari/brew"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@3"
 # C parser in Python
 brew "pycparser"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Distributed revision control system
@@ -100,8 +100,8 @@ cask "lens"
 cask "maccy"
 # Full TeX Live distribution with GUI applications
 cask "mactex"
-# Syncs files between computers and MEGA Cloud drives
-cask "megasync"
+# Provides updates to various Microsoft products
+cask "microsoft-auto-update"
 # Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
 # Interactive tool for analyzing MongoDB data
@@ -135,17 +135,11 @@ cask "zoom"
 vscode "aaron-bond.better-comments"
 vscode "bierner.markdown-mermaid"
 vscode "bpruitt-goddard.mermaid-markdown-syntax-highlighting"
-vscode "cssho.vscode-svgviewer"
-vscode "dbaeumer.vscode-eslint"
-vscode "deerawan.vscode-faker"
 vscode "donjayamanne.githistory"
+vscode "EditorConfig.EditorConfig"
 vscode "esbenp.prettier-vscode"
 vscode "GraphQL.vscode-graphql"
-vscode "GraphQL.vscode-graphql-execution"
 vscode "GraphQL.vscode-graphql-syntax"
 vscode "hashicorp.terraform"
-vscode "ms-azuretools.vscode-docker"
-vscode "ms-vscode-remote.remote-containers"
-vscode "ritwickdey.LiveServer"
 vscode "shd101wyy.markdown-preview-enhanced"
 vscode "waderyan.gitblame"
