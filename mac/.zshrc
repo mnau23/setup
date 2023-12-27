@@ -118,6 +118,14 @@ function jwtTokenDecoder() {
 }
 alias jwtdecode=jwtTokenDecoder
 
+# Show encoded secret as json
+## eg: kubejson <secret_name>
+function printJsonSecret() {
+  secret_name=$1
+  kubectl neat get -- secret "$1" -o json
+}
+alias kubejson=printJsonSecret
+
 # Find and decode a secret based on current context and namespace
 ## eg: kubedecode <secret_name> <key_name>
 function getDecodedSecret() {
@@ -162,6 +170,20 @@ function changeCronjobStatus() {
 }
 alias kp_cronjob=changeCronjobStatus
 
+# Remove finalizers from ingress
+## eg: rm_finalizers <ingress_name>
+function patchIngress() {
+    kubectl patch ingress $1 --type json --patch='[ { "op": "remove", "path": "/metadata/finalizers" } ]'
+}
+alias rm_finalizers=patchIngress
+
+# Get number of ingresses between namespaces in the same context
+## eg: count
+function countIngress() {
+    kubectl get ingress --all-namespaces | wc -l
+}
+alias count=countIngress
+
 # Backup files in Obsidian Vault
 ## eg: obsidian-backup
 function backupObsidianVaultToGithub() {
@@ -203,6 +225,7 @@ alias gfp="git fetch && git pull"
 alias gl="git log"
 alias gpl="git pull"
 alias gps="git push"
+alias grc="git rebase --continue"
 alias pretty="git log --graph --pretty='%Cred%h%Creset %Cgreen(%ad) %C(bold blue)<%an>%Creset -%C(yellow)%d%Creset %s' --date=short --abbrev-commit"
 alias prettys="git log --graph --pretty='%Cred%h%Creset %Cgreen(%ad) %C(bold blue)<%an>%Creset -%C(yellow)%d%Creset %s' --date=short --stat"
 

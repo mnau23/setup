@@ -68,6 +68,8 @@ cask "qbittorrent"
 cask "rar"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Rust IDE
+cask "rustrover"
 # Team communication and collaboration software
 cask "slack"
 # Music streaming service
@@ -92,7 +94,7 @@ cask "vlc"
 cask "zoom"
 mas "iMovie", id: 408981434
 vscode "EditorConfig.EditorConfig"
-vscode "Equinusocio.vsc-community-material-theme"
+vscode "Equinusocio.vsc-material-theme"
 vscode "equinusocio.vsc-material-theme-icons"
 vscode "esbenp.prettier-vscode"
 vscode "glenn2223.live-sass"

@@ -16,6 +16,8 @@ brew "openssl@3"
 brew "awscli"
 # Distributed revision control system
 brew "git"
+# C/C++ and Java libraries for Unicode and globalization
+brew "icu4c"
 # Kubernetes package manager
 brew "helm"
 # Lightweight and flexible command-line JSON processor
@@ -78,6 +80,8 @@ brew "mongodb/brew/mongodb-community"
 brew "noovolari/brew/leapp-cli-darwin-arm64"
 # Web browser focusing on privacy
 cask "brave-browser"
+# Workflow and Decision Automation Platform
+cask "camunda-modeler"
 # Tool to remove unnecessary files and folders from disk
 cask "cleanmymac"
 # Universal database tool and SQL client
@@ -96,6 +100,8 @@ cask "iterm2"
 cask "leapp"
 # Kubernetes IDE
 cask "lens"
+# Free cross-platform office suite, fresh version
+cask "libreoffice"
 # Clipboard manager
 cask "maccy"
 # Full TeX Live distribution with GUI applications
@@ -116,6 +122,8 @@ cask "postman"
 cask "pycharm-ce"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Rust IDE
+cask "rustrover"
 # Team communication and collaboration software
 cask "slack"
 # Music streaming service
@@ -141,5 +149,6 @@ vscode "esbenp.prettier-vscode"
 vscode "GraphQL.vscode-graphql"
 vscode "GraphQL.vscode-graphql-syntax"
 vscode "hashicorp.terraform"
+vscode "PrateekMahendrakar.prettyxml"
 vscode "shd101wyy.markdown-preview-enhanced"
 vscode "waderyan.gitblame"
