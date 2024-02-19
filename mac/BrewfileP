@@ -15,13 +15,15 @@ brew "mysql"
 # Platform built on V8 to build network applications
 brew "node"
 # Object-relational database system
-brew "postgresql@15"
+brew "postgresql@15", link: true
 # Python version management
 brew "pyenv"
 # Rust toolchain installer
 brew "rustup-init"
 # Build tool for Scala projects
 brew "sbt"
+# Tool Command Language
+brew "tcl-tk"
 # Vi 'workalike' with many additional features
 brew "vim"
 # Launcher for Coursier
@@ -34,7 +36,7 @@ cask "arc"
 cask "brave-browser"
 # Universal database tool and SQL client
 cask "dbeaver-community"
-# App to build and share containerized applications and microservices
+# App to build and share containerised applications and microservices
 cask "docker"
 # Utility to hide menu bar items
 cask "hiddenbar"
@@ -56,7 +58,7 @@ cask "microsoft-powerpoint"
 cask "microsoft-teams"
 # Word processor
 cask "microsoft-word"
-# App to write, plan, collaborate, and get organized
+# App to write, plan, collaborate, and get organised
 cask "notion"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
@@ -93,12 +95,13 @@ cask "vlc"
 # Video communication and virtual meeting platform
 cask "zoom"
 mas "iMovie", id: 408981434
-vscode "EditorConfig.EditorConfig"
-vscode "Equinusocio.vsc-material-theme"
+vscode "editorconfig.editorconfig"
+vscode "equinusocio.vsc-material-theme"
 vscode "equinusocio.vsc-material-theme-icons"
 vscode "esbenp.prettier-vscode"
 vscode "glenn2223.live-sass"
 vscode "ms-azuretools.vscode-docker"
-vscode "ritwickdey.LiveServer"
+vscode "redhat.vscode-yaml"
+vscode "ritwickdey.liveserver"
 vscode "shd101wyy.markdown-preview-enhanced"
 vscode "waderyan.gitblame"

@@ -52,6 +52,8 @@ brew "mysql"
 brew "nvm"
 # Object-relational database system
 brew "postgresql@14"
+# Protocol buffers (Google's data interchange format)
+brew "protobuf"
 # Python version management
 brew "pyenv"
 # Search tool like grep and The Silver Searcher
@@ -86,7 +88,7 @@ cask "camunda-modeler"
 cask "cleanmymac"
 # Universal database tool and SQL client
 cask "dbeaver-community"
-# App to build and share containerized applications and microservices
+# App to build and share containerised applications and microservices
 cask "docker"
 # Utility to hide menu bar items
 cask "hiddenbar"
@@ -112,7 +114,7 @@ cask "microsoft-auto-update"
 cask "microsoft-teams"
 # Interactive tool for analyzing MongoDB data
 cask "mongodb-compass"
-# App to write, plan, collaborate, and get organized
+# App to write, plan, collaborate, and get organised
 cask "notion"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
@@ -144,11 +146,12 @@ vscode "aaron-bond.better-comments"
 vscode "bierner.markdown-mermaid"
 vscode "bpruitt-goddard.mermaid-markdown-syntax-highlighting"
 vscode "donjayamanne.githistory"
-vscode "EditorConfig.EditorConfig"
+vscode "editorconfig.editorconfig"
 vscode "esbenp.prettier-vscode"
-vscode "GraphQL.vscode-graphql"
-vscode "GraphQL.vscode-graphql-syntax"
+vscode "graphql.vscode-graphql"
+vscode "graphql.vscode-graphql-syntax"
 vscode "hashicorp.terraform"
-vscode "PrateekMahendrakar.prettyxml"
+vscode "prateekmahendrakar.prettyxml"
+vscode "redhat.vscode-yaml"
 vscode "shd101wyy.markdown-preview-enhanced"
 vscode "waderyan.gitblame"
