@@ -2,6 +2,8 @@ tap "coursier/formulas"
 tap "homebrew/bundle"
 tap "homebrew/cask-versions"
 tap "homebrew/services"
+# Shell script to build fancy DMGs
+brew "create-dmg"
 # Distributed revision control system
 brew "git"
 # Lightweight and flexible command-line JSON processor
@@ -72,6 +74,8 @@ cask "rar"
 cask "rectangle"
 # Rust IDE
 cask "rustrover"
+# Digital design and prototyping platform
+cask "sketch"
 # Team communication and collaboration software
 cask "slack"
 # Music streaming service
@@ -95,6 +99,8 @@ cask "vlc"
 # Video communication and virtual meeting platform
 cask "zoom"
 mas "iMovie", id: 408981434
+vscode "cardinal90.multi-cursor-case-preserve"
+vscode "donjayamanne.githistory"
 vscode "editorconfig.editorconfig"
 vscode "equinusocio.vsc-material-theme"
 vscode "equinusocio.vsc-material-theme-icons"
@@ -104,4 +110,5 @@ vscode "ms-azuretools.vscode-docker"
 vscode "redhat.vscode-yaml"
 vscode "ritwickdey.liveserver"
 vscode "shd101wyy.markdown-preview-enhanced"
+vscode "streetsidesoftware.code-spell-checker"
 vscode "waderyan.gitblame"
