@@ -173,16 +173,25 @@ alias kp_cronjob=changeCronjobStatus
 # Remove finalizers from ingress
 ## eg: rm_finalizers <ingress_name>
 function patchIngress() {
-    kubectl patch ingress $1 --type json --patch='[ { "op": "remove", "path": "/metadata/finalizers" } ]'
+  kubectl patch ingress $1 --type json --patch='[ { "op": "remove", "path": "/metadata/finalizers" } ]'
 }
 alias rm_finalizers=patchIngress
 
 # Get number of ingresses between namespaces in the same context
-## eg: count
+## eg: count_ingress
 function countIngress() {
-    kubectl get ingress --all-namespaces | wc -l
+  kubectl get ingress --all-namespaces | wc -l
 }
-alias count=countIngress
+alias count_ingress=countIngress
+
+# Create tag for releasing to PROD
+## eg: bringmetolife
+function tagReleaseToProd() {
+  today="`date +'%Y%m%d'`"
+  git tag "release-$today" # release-YYYYMMDD
+  git push --tags
+}
+alias bringmetolife=tagReleaseToProd
 
 # Backup files in Obsidian Vault
 ## eg: obsidian-backup
