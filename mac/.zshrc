@@ -40,9 +40,6 @@ source $ZSH/oh-my-zsh.sh
 # Homebrew
 export PATH="/opt/homebrew/bin:$PATH"
 
-# krew - package manager for kubectl plugins
-export PATH="$HOME/.krew/bin:$PATH"
-
 # nvm - Node Version Manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -53,15 +50,24 @@ export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 
 # Poetry
-export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # Confluent Kafka for Python
-export C_INCLUDE_PATH="/opt/homebrew/Cellar/librdkafka/2.2.0/include/"
-export LIBRARY_PATH="/opt/homebrew/Cellar/librdkafka/2.2.0/lib:$LIBRARY_PATH"
+export LIBRDKAFKA_VERSION="2.4.0"
+export C_INCLUDE_PATH="/opt/homebrew/Cellar/librdkafka/$LIBRDKAFKA_VERSION/include/"
+export LIBRARY_PATH="/opt/homebrew/Cellar/librdkafka/$LIBRDKAFKA_VERSION/lib:$LIBRARY_PATH"
 
 # Kubernetes - helper for cluster/namespace in terminal (https://github.com/jonmosco/kube-ps1)
 source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh";
 export PROMPT='$(kube_ps1)'$PROMPT;
+
+# krew - package manager for kubectl plugins
+export PATH="$HOME/.krew/bin:$PATH"
+
+# JetBrains IDE
+export PATH="/Applications/IntelliJ IDEA CE.app/Contents/MacOS:$PATH"
+export PATH="/Applications/PyCharm CE.app/Contents/MacOS:$PATH"
+export PATH="/Applications/RustRover.app/Contents/MacOS:$PATH"
 
 ######################################################################
                               # USEFUL #                              
@@ -109,7 +115,7 @@ function jwtTokenDecoder() {
       b64="${b64}="
     fi
     d="$(openssl enc -base64 -d -A <<< "$b64")"
-    python -mjson.tool <<< "$d"
+    python3 -mjson.tool <<< "$d"
     # don't decode further if this is an encrypted JWT (JWE)
     if [[ 1 -eq part ]] && grep '"enc":' <<< "$d" >/dev/null ; then
         exit 0
@@ -121,7 +127,6 @@ alias jwtdecode=jwtTokenDecoder
 # Show encoded secret as json
 ## eg: kubejson <secret_name>
 function printJsonSecret() {
-  secret_name=$1
   kubectl neat get -- secret "$1" -o json
 }
 alias kubejson=printJsonSecret
@@ -129,9 +134,7 @@ alias kubejson=printJsonSecret
 # Find and decode a secret based on current context and namespace
 ## eg: kubedecode <secret_name> <key_name>
 function getDecodedSecret() {
-  secret_name=$1
-  key_name=$2
-  kubectl get secrets $secret_name -o yaml | rg $key_name | grep -v "{" | sed 's/ * //g' | awk -F ":" '{printf($1": "); system("echo " $2 " | base64 -d");
+  kubectl get secrets $1 -o yaml | rg $2 | grep -v "{" | sed 's/ * //g' | awk -F ":" '{printf($1": "); system("echo " $2 " | base64 -d");
   printf("\n")}'
 }
 alias kubedecode=getDecodedSecret
@@ -173,11 +176,11 @@ alias kp_cronjob=changeCronjobStatus
 # Remove finalizers from ingress
 ## eg: rm_finalizers <ingress_name>
 function patchIngress() {
-  kubectl patch ingress $1 --type json --patch='[ { "op": "remove", "path": "/metadata/finalizers" } ]'
+  kubectl patch ingress/$1 --type json --patch='[ { "op": "remove", "path": "/metadata/finalizers" } ]'
 }
 alias rm_finalizers=patchIngress
 
-# Get number of ingresses between namespaces in the same context
+# Count number of ingress in all namespaces within the same context
 ## eg: count_ingress
 function countIngress() {
   kubectl get ingress --all-namespaces | wc -l
