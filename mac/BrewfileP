@@ -7,6 +7,8 @@ brew "xz"
 brew "create-dmg"
 # Distributed revision control system
 brew "git"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Mac App Store command-line interface
@@ -22,7 +24,7 @@ brew "pre-commit"
 # Python version management
 brew "pyenv"
 # Rust toolchain installer
-brew "rustup-init"
+brew "rustup"
 # Build tool for Scala projects
 brew "sbt"
 # Tool Command Language
@@ -37,14 +39,16 @@ cask "aldente"
 cask "arc"
 # Web browser focusing on privacy
 cask "brave-browser"
+# Opensource IDE for exploring and testing api's
+cask "bruno"
+# E-books management software
+cask "calibre"
 # Universal database tool and SQL client
 cask "dbeaver-community"
 # App to build and share containerised applications and microservices
 cask "docker"
 # Utility to hide menu bar items
 cask "hiddenbar"
-# IDE for Java development - community edition
-cask "intellij-idea-ce"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # Clipboard manager
@@ -109,6 +113,7 @@ vscode "equinusocio.vsc-material-theme"
 vscode "equinusocio.vsc-material-theme-icons"
 vscode "esbenp.prettier-vscode"
 vscode "glenn2223.live-sass"
+vscode "golang.go"
 vscode "ms-azuretools.vscode-docker"
 vscode "redhat.vscode-yaml"
 vscode "ritwickdey.liveserver"

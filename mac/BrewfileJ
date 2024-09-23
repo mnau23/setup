@@ -63,12 +63,14 @@ brew "protobuf"
 brew "pycparser"
 # Python version management
 brew "pyenv"
+# Convert character set (charsets)
+brew "recode"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Powerful, clean, object-oriented scripting language
 brew "ruby"
 # Rust toolchain installer
-brew "rustup-init"
+brew "rustup"
 # Build tool for Scala projects
 brew "sbt"
 # Executes a program periodically, showing output fullscreen
@@ -87,8 +89,8 @@ brew "int128/kubelogin/kubelogin"
 brew "mongodb/brew/mongodb-community"
 # Install Leapp CLI
 brew "noovolari/brew/leapp-cli-darwin-arm64"
-# Web browser focusing on privacy
-cask "brave-browser"
+# Opensource IDE for exploring and testing api's
+cask "bruno"
 # Workflow and Decision Automation Platform
 cask "camunda-modeler"
 # Universal database tool and SQL client
@@ -99,8 +101,6 @@ cask "docker"
 cask "firefox"
 # Utility to hide menu bar items
 cask "hiddenbar"
-# HTTP and GraphQL Client
-cask "insomnia"
 # IDE for Java development - community edition
 cask "intellij-idea-ce"
 # Terminal emulator as alternative to Apple's Terminal app
@@ -145,6 +145,8 @@ cask "temurin8"
 cask "the-unarchiver"
 # Open-source code editor
 cask "visual-studio-code"
+# Multiplayer code editor
+cask "zed"
 # Video communication and virtual meeting platform
 cask "zoom"
 vscode "aaron-bond.better-comments"
