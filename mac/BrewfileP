@@ -5,6 +5,10 @@ tap "homebrew/services"
 brew "xz"
 # Shell script to build fancy DMGs
 brew "create-dmg"
+# Perl lib for reading and writing EXIF metadata
+brew "exiftool"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
 # Distributed revision control system
 brew "git"
 # Open source programming language to build simple/reliable/efficient software
@@ -17,6 +21,8 @@ brew "mas"
 brew "mysql"
 # Platform built on V8 to build network applications
 brew "node"
+# Manage compile and link flags for libraries
+brew "pkg-config"
 # Object-relational database system
 brew "postgresql@15", link: true
 # Framework for managing multi-language pre-commit hooks

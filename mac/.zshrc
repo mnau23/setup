@@ -237,19 +237,13 @@ alias gfp="git fetch && git pull"
 alias gl="git log"
 alias gpl="git pull"
 alias gps="git push"
+alias gra="git rebase --abort"
 alias grc="git rebase --continue"
 alias pretty="git log --graph --pretty='%Cred%h%Creset %Cgreen(%ad) %C(bold blue)<%an>%Creset -%C(yellow)%d%Creset %s' --date=short --abbrev-commit"
 alias prettys="git log --graph --pretty='%Cred%h%Creset %Cgreen(%ad) %C(bold blue)<%an>%Creset -%C(yellow)%d%Creset %s' --date=short --stat"
 
 ## Kubernetes
-alias kdes="kubectl describe"
-# ---
-alias kcron="kubectl get cronjob"
-alias kdepl="kubectl get deployments"
-alias king="kubectl get ingress"
-alias knodes="kubectl get nodes"
-alias kpods="kubectl get pods"
-alias ksec="kubectl get secrets"
+alias kgcj="kubectl get cronjob"
 
 ## Leapp
 alias llist="leapp session list"

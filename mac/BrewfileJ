@@ -85,8 +85,6 @@ brew "coursier/formulas/coursier"
 brew "hashicorp/tap/terraform"
 # A kubectl plugin for Kubernetes OpenID Connect authentication
 brew "int128/kubelogin/kubelogin"
-# High-performance, schema-free, document-oriented database
-brew "mongodb/brew/mongodb-community"
 # Install Leapp CLI
 brew "noovolari/brew/leapp-cli-darwin-arm64"
 # Opensource IDE for exploring and testing api's
@@ -119,8 +117,6 @@ cask "mactex"
 cask "microsoft-auto-update"
 # Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
-# Interactive tool for analyzing MongoDB data
-cask "mongodb-compass"
 # App to write, plan, collaborate, and get organised
 cask "notion"
 # Knowledge base that works on top of a local folder of plain text Markdown files
