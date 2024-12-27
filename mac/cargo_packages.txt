@@ -1,0 +1,14 @@
+cargo-audit
+cargo-make
+cargo-mutants
+cargo-shear
+cargo-sort
+diesel
+diesel_cli
+diesel_cli_ext
+diesel_ext
+git-cliff
+git-cliff-completions
+git-cliff-mangen
+lychee
+makers
