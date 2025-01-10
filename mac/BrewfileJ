@@ -1,4 +1,5 @@
 tap "auth0/auth0-cli"
+tap "cargo-lambda/cargo-lambda"
 tap "codefresh-io/cli"
 tap "coursier/formulas"
 tap "hashicorp/tap"
@@ -11,10 +12,10 @@ tap "noovolari/brew"
 brew "openssl@3"
 # Official Amazon AWS command-line interface
 brew "awscli"
+# Build automation tool for the container era
+brew "earthly"
 # Distributed revision control system
 brew "git"
-# C/C++ and Java libraries for Unicode and globalization
-brew "icu4c"
 # Curl for GraphQL with autocomplete, subscriptions and GraphiQL
 brew "graphqurl"
 # Command-Line Interface for Hasura GraphQL Engine
@@ -25,16 +26,6 @@ brew "helm"
 brew "jq"
 # Kubernetes CLI To Manage Your Clusters In Style!
 brew "k9s"
-# Development kit for the Java programming language
-brew "openjdk"
-# Centralized server for distributed coordination of services
-brew "zookeeper"
-# Open-source distributed event streaming platform
-brew "kafka"
-# Apache Kafka C/C++ library
-brew "librdkafka"
-# Generic command-line non-JVM Apache Kafka producer and consumer
-brew "kcat"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
 # Package manager for kubectl plugins
@@ -53,6 +44,10 @@ brew "mysql"
 brew "nvm"
 # Generate clients, server & docs from an OpenAPI spec (v2, v3)
 brew "openapi-generator"
+# Development kit for the Java programming language
+brew "openjdk"
+# Package compiler and linker metadata toolkit
+brew "pkgconf"
 # Object-relational database system
 brew "postgresql@14"
 # Framework for managing multi-language pre-commit hooks
@@ -77,6 +72,8 @@ brew "sbt"
 brew "watch"
 # Build, manage and test your Auth0 integrations from the command line
 brew "auth0/auth0-cli/auth0"
+# Cargo Lambda is a Cargo subcommand to help you work with AWS Lambda.
+brew "cargo-lambda/cargo-lambda/cargo-lambda"
 # Codefresh CLI provides a full and flexible interface to interact with Codefresh.
 brew "codefresh-io/cli/codefresh"
 # Launcher for Coursier
@@ -117,6 +114,8 @@ cask "mactex"
 cask "microsoft-auto-update"
 # Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
+# Create mock APIs in seconds
+cask "mockoon"
 # App to write, plan, collaborate, and get organised
 cask "notion"
 # Knowledge base that works on top of a local folder of plain text Markdown files
@@ -143,18 +142,18 @@ cask "the-unarchiver"
 cask "visual-studio-code"
 # Multiplayer code editor
 cask "zed"
-# Video communication and virtual meeting platform
-cask "zoom"
 vscode "aaron-bond.better-comments"
 vscode "bierner.markdown-mermaid"
 vscode "bpruitt-goddard.mermaid-markdown-syntax-highlighting"
 vscode "donjayamanne.githistory"
 vscode "editorconfig.editorconfig"
 vscode "esbenp.prettier-vscode"
+vscode "fabianlauer.vs-code-xml-format"
 vscode "graphql.vscode-graphql"
 vscode "graphql.vscode-graphql-syntax"
 vscode "hashicorp.terraform"
 vscode "prateekmahendrakar.prettyxml"
+vscode "redhat.vscode-xml"
 vscode "redhat.vscode-yaml"
 vscode "shd101wyy.markdown-preview-enhanced"
 vscode "waderyan.gitblame"

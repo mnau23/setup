@@ -1,4 +1,4 @@
-# Setup
+# Setup :gear:
 
 > Some configuration files and scripts to automatically install everything I need.
 
@@ -12,7 +12,7 @@ sh brewup.sh
 
 ### iTerm2
 
-Colour schemes
+Colour schemes:
 
 - `material-design-colors` &rarr; make it darker `background: 121415`
 
@@ -27,5 +27,5 @@ Colour schemes
 
 ## Help
 
-iTerm2 &rarr; [colour schemes](https://iterm2colorschemes.com/)<br/>
-Shell &rarr; [colour and style codes](https://arkit.co.in/coloring-style-text-shell-scripting/)
+- iTerm2 &rarr; [colour schemes](https://iterm2colorschemes.com/)
+- Shell &rarr; [colour and style codes](https://arkit.co.in/coloring-style-text-shell-scripting/)
