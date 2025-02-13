@@ -8,6 +8,8 @@ tap "homebrew/services"
 tap "int128/kubelogin"
 tap "mongodb/brew"
 tap "noovolari/brew"
+# C parser in Python
+brew "pycparser"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
 # Official Amazon AWS command-line interface
@@ -38,6 +40,8 @@ brew "kubectx"
 brew "libpq"
 # Mac App Store command-line interface
 brew "mas"
+# Protocol buffers (Google's data interchange format)
+brew "protobuf"
 # Open source relational database management system
 brew "mysql"
 # Manage multiple Node.js versions
@@ -52,10 +56,6 @@ brew "pkgconf"
 brew "postgresql@14"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
-# Protocol buffers (Google's data interchange format)
-brew "protobuf"
-# C parser in Python
-brew "pycparser"
 # Python version management
 brew "pyenv"
 # Convert character set (charsets)
@@ -128,6 +128,8 @@ cask "pycharm-ce"
 cask "rectangle"
 # Rust IDE
 cask "rustrover"
+# Salesforce CLI tools
+cask "sf"
 # Team communication and collaboration software
 cask "slack"
 # Music streaming service

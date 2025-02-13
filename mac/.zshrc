@@ -34,11 +34,8 @@ source $ZSH/oh-my-zsh.sh
 ######################################################################
 
 # Powerlevel10k
-## To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+### To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Homebrew
-export PATH="/opt/homebrew/bin:$PATH"
 
 # nvm - Node Version Manager
 export NVM_DIR="$HOME/.nvm"
@@ -52,10 +49,27 @@ eval "$(pyenv init -)"
 # Poetry
 export PATH="$HOME/.local/bin:$PATH"
 
+# TKinter
+TCL_VERSION=8
+export LDFLAGS="-L/opt/homebrew/opt/tcl-tk@$TCL_VERSION/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/tcl-tk@$TCL_VERSION/include"
+export PATH="/opt/homebrew/opt/tcl-tk@$TCL_VERSION/bin:$PATH"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/tcl-tk@$TCL_VERSION/lib/pkgconfig"
+
+# JetBrains IDE
+export PATH="/Applications/IntelliJ IDEA CE.app/Contents/MacOS:$PATH"
+export PATH="/Applications/PyCharm CE.app/Contents/MacOS:$PATH"
+export PATH="/Applications/RustRover.app/Contents/MacOS:$PATH"
+
+#####
+
 # Confluent Kafka for Python
 export LIBRDKAFKA_VERSION="2.4.0"
 export C_INCLUDE_PATH="/opt/homebrew/Cellar/librdkafka/$LIBRDKAFKA_VERSION/include/"
 export LIBRARY_PATH="/opt/homebrew/Cellar/librdkafka/$LIBRDKAFKA_VERSION/lib:$LIBRARY_PATH"
+
+# Homebrew
+export PATH="/opt/homebrew/bin:$PATH"
 
 # Kubernetes - helper for cluster/namespace in terminal (https://github.com/jonmosco/kube-ps1)
 source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh";
@@ -63,11 +77,6 @@ export PROMPT='$(kube_ps1)'$PROMPT;
 
 # krew - package manager for kubectl plugins
 export PATH="$HOME/.krew/bin:$PATH"
-
-# JetBrains IDE
-export PATH="/Applications/IntelliJ IDEA CE.app/Contents/MacOS:$PATH"
-export PATH="/Applications/PyCharm CE.app/Contents/MacOS:$PATH"
-export PATH="/Applications/RustRover.app/Contents/MacOS:$PATH"
 
 ######################################################################
                               # USEFUL #                              
@@ -94,6 +103,19 @@ function homebrewUpdater() {
 }
 alias brewup=homebrewUpdater
 
+# Backup files in Obsidian Vault
+## eg: obsidian-backup
+function backupObsidianVaultToGithub() {
+  cd ~/<CUSTOM_PATH>/obsidian-vault
+  git add .
+  now="`date +'%Y-%m-%d %H:%M'`"
+  msg="vault backup $now" # vault backup YYYY-MM-DD HH:mm
+  git commit -m "$msg"
+  git push
+  cd ~
+}
+alias obsidian-backup=backupObsidianVaultToGithub
+
 # Switch between different Java versions
 ## eg: jdk <version_number>
 function setJdkVersion() {
@@ -101,6 +123,17 @@ function setJdkVersion() {
   java -version
 }
 alias jdk=setJdkVersion
+
+# Convert epoch to human-readable date
+## eg: epoch <timestamp>
+function epochToDatetime() {
+  if [[ -z "$1" ]]; then
+    echo "Missing timestamp after epoch command."
+    return 1
+  fi
+  date -d "@$1" +"%Y-%m-%d %H:%M:%S"
+}
+alias epoch=epochToDatetime
 
 # JWT decoder
 ## eg: jwt "<example>"
@@ -123,6 +156,8 @@ function jwtTokenDecoder() {
   done
 }
 alias jwtdecode=jwtTokenDecoder
+
+#####
 
 # Show encoded secret as json
 ## eg: kubejson <secret_name>
@@ -195,19 +230,6 @@ function tagReleaseToProd() {
   git push --tags
 }
 alias bringmetolife=tagReleaseToProd
-
-# Backup files in Obsidian Vault
-## eg: obsidian-backup
-function backupObsidianVaultToGithub() {
-  cd ~/<CUSTOM_PATH>/obsidian-vault
-  git add .
-  now="`date +'%Y-%m-%d %H:%M'`"
-  msg="vault backup $now" # vault backup YYYY-MM-DD HH:mm
-  git commit -m "$msg"
-  git push
-  cd ~
-}
-alias obsidian-backup=backupObsidianVaultToGithub
 
 #####################################################################
                               # ALIAS #                              
