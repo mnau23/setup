@@ -9,6 +9,7 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 
 # Theme
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="robbyrussell"        # default
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
@@ -19,10 +20,13 @@ zstyle ':omz:update' frequency 7  # check weekly for updates
 ENABLE_CORRECTION="true"
 
 # Plugins
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(
   autoupdate
   git
   kubectl
+  kube-ps1
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
@@ -72,7 +76,7 @@ export LIBRARY_PATH="/opt/homebrew/Cellar/librdkafka/$LIBRDKAFKA_VERSION/lib:$LI
 export PATH="/opt/homebrew/bin:$PATH"
 
 # Kubernetes - helper for cluster/namespace in terminal (https://github.com/jonmosco/kube-ps1)
-source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh";
+#source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh";
 export PROMPT='$(kube_ps1)'$PROMPT;
 
 # krew - package manager for kubectl plugins
@@ -157,6 +161,15 @@ function jwtTokenDecoder() {
 }
 alias jwtdecode=jwtTokenDecoder
 
+# Create tag for releasing to PROD
+## eg: bringmetolife
+function tagReleaseToProd() {
+  today="`date +'%Y%m%d'`"
+  git tag "release-$today" # release-YYYYMMDD
+  git push --tags
+}
+alias bringmetolife=tagReleaseToProd
+
 #####
 
 # Show encoded secret as json
@@ -221,15 +234,6 @@ function countIngress() {
   kubectl get ingress --all-namespaces | wc -l
 }
 alias count_ingress=countIngress
-
-# Create tag for releasing to PROD
-## eg: bringmetolife
-function tagReleaseToProd() {
-  today="`date +'%Y%m%d'`"
-  git tag "release-$today" # release-YYYYMMDD
-  git push --tags
-}
-alias bringmetolife=tagReleaseToProd
 
 #####################################################################
                               # ALIAS #                              
