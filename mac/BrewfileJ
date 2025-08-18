@@ -6,20 +6,12 @@ tap "hashicorp/tap"
 tap "int128/kubelogin"
 tap "mongodb/brew"
 tap "noovolari/brew"
-# C parser in Python
-brew "pycparser"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
 # Official Amazon AWS command-line interface
 brew "awscli"
-# Build automation tool for the container era
-brew "earthly"
 # Distributed revision control system
 brew "git"
-# Curl for GraphQL with autocomplete, subscriptions and GraphiQL
-brew "graphqurl"
-# Command-Line Interface for Hasura GraphQL Engine
-brew "hasura-cli", link: false
 # Kubernetes package manager
 brew "helm"
 # Lightweight and flexible command-line JSON processor
@@ -54,6 +46,8 @@ brew "postgresql@14"
 brew "pre-commit"
 # Protocol buffers (Google's data interchange format)
 brew "protobuf"
+# C parser in Python
+brew "pycparser"
 # Python version management
 brew "pyenv"
 # Convert character set (charsets)
@@ -91,7 +85,7 @@ cask "camunda-modeler"
 # Universal database tool and SQL client
 cask "dbeaver-community"
 # App to build and share containerised applications and microservices
-cask "docker"
+cask "docker-desktop"
 # Web browser
 cask "firefox"
 # Hex editor focussing on speed
@@ -130,8 +124,6 @@ cask "pycharm-ce"
 cask "rectangle"
 # Rust IDE
 cask "rustrover"
-# Salesforce CLI tools
-cask "sf"
 # Team communication and collaboration software
 cask "slack"
 # Music streaming service
@@ -142,6 +134,8 @@ cask "temurin11"
 cask "temurin8"
 # Unpacks archive files
 cask "the-unarchiver"
+# Two-step authentication software
+cask "vip-access"
 # Open-source code editor
 cask "visual-studio-code"
 # Multiplayer code editor
@@ -159,5 +153,6 @@ vscode "hashicorp.terraform"
 vscode "prateekmahendrakar.prettyxml"
 vscode "redhat.vscode-xml"
 vscode "redhat.vscode-yaml"
+vscode "rust-lang.rust-analyzer"
 vscode "shd101wyy.markdown-preview-enhanced"
 vscode "waderyan.gitblame"

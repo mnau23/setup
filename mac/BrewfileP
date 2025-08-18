@@ -1,6 +1,4 @@
 tap "coursier/formulas"
-tap "homebrew/bundle"
-tap "homebrew/services"
 # General-purpose data compression with high compression ratio
 brew "xz"
 # Shell script to build fancy DMGs
@@ -27,6 +25,8 @@ brew "pkgconf"
 brew "postgresql@15", link: true
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
+# Protocol buffers (Google's data interchange format)
+brew "protobuf"
 # Python version management
 brew "pyenv"
 # Search tool like grep and The Silver Searcher
@@ -54,7 +54,7 @@ cask "calibre"
 # Universal database tool and SQL client
 cask "dbeaver-community"
 # App to build and share containerised applications and microservices
-cask "docker"
+cask "docker-desktop"
 # Utility to hide menu bar items
 cask "hiddenbar"
 # Terminal emulator as alternative to Apple's Terminal app
@@ -106,7 +106,7 @@ cask "temurin8"
 # Unpacks archive files
 cask "the-unarchiver"
 # To-do list
-cask "todoist"
+cask "todoist-app"
 # Development environment
 cask "vagrant"
 # Open-source code editor
@@ -123,6 +123,7 @@ vscode "editorconfig.editorconfig"
 vscode "esbenp.prettier-vscode"
 vscode "glenn2223.live-sass"
 vscode "golang.go"
+vscode "ms-azuretools.vscode-containers"
 vscode "ms-azuretools.vscode-docker"
 vscode "redhat.vscode-yaml"
 vscode "ritwickdey.liveserver"

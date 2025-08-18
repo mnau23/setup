@@ -1,0 +1,6 @@
+@salesforce/cli
+auth0-deploy-cli
+corepack
+db-migrate
+graphql-codegen
+npm

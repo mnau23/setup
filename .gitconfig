@@ -1,15 +1,15 @@
 [core]
-	autocrlf = input # ensure line endings in files you checkout are correct for macOS
-	editor = vim
-	excludesfile = /Users/<USER>/.gitignore_global
-[init]
-	defaultBranch = main
-[pull]
-	rebase = true
-[push]
-	autoSetupRemote = true
-[user]
-	email = <EMAIL>
-	name = <USERNAME>
+    autocrlf = input # ensure line endings in files you checkout are correct for macOS
+    editor = vim
+    excludesfile = /Users/<USER>/.gitignore_global
 [credential]
-	helper = osxkeychain
+    helper = osxkeychain
+[init]
+    defaultBranch = main
+[pull]
+    rebase = true
+[push]
+    autoSetupRemote = true
+[user]
+    email = <EMAIL>
+    name = <USERNAME>

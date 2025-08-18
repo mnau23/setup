@@ -3,6 +3,7 @@ cargo-make
 cargo-mutants
 cargo-shear
 cargo-sort
+cargo-tarpaulin
 diesel
 diesel_cli
 diesel_cli_ext
@@ -12,3 +13,4 @@ git-cliff-completions
 git-cliff-mangen
 lychee
 makers
+mdbook
