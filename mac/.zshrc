@@ -68,7 +68,7 @@ export PATH="/Applications/RustRover.app/Contents/MacOS:$PATH"
 #####
 
 # Confluent Kafka for Python
-export LIBRDKAFKA_VERSION="2.4.0"
+export LIBRDKAFKA_VERSION="2.6.1"
 export C_INCLUDE_PATH="/opt/homebrew/Cellar/librdkafka/$LIBRDKAFKA_VERSION/include/"
 export LIBRARY_PATH="/opt/homebrew/Cellar/librdkafka/$LIBRDKAFKA_VERSION/lib:$LIBRARY_PATH"
 
@@ -138,6 +138,14 @@ function epochToDatetime() {
   date -d "@$1" +"%Y-%m-%d %H:%M:%S"
 }
 alias epoch=epochToDatetime
+
+# Generate random string ("a-z" + "0-9")
+## eg: random 32
+function generateRandStr() {
+  LC_ALL=C tr -dc 'a-z0-9' < /dev/urandom | head -c "${1:-16}"
+  echo
+}
+alias random=generateRandStr
 
 # JWT decoder
 ## eg: jwt "<example>"
