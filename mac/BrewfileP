@@ -79,6 +79,8 @@ cask "mockoon"
 cask "notion"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# VPN client focusing on security
+cask "protonvpn"
 # IDE for Python programming - Community Edition
 cask "pycharm-ce"
 # Peer to peer Bitorrent client
@@ -113,6 +115,10 @@ cask "vagrant"
 cask "visual-studio-code"
 # Multimedia player
 cask "vlc"
+# Multiplayer code editor
+cask "zed"
+# Gecko based web browser
+cask "zen"
 # Video communication and virtual meeting platform
 cask "zoom"
 mas "iMovie", id: 408981434
@@ -130,3 +136,5 @@ vscode "ritwickdey.liveserver"
 vscode "shd101wyy.markdown-preview-enhanced"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "waderyan.gitblame"
+go "golang.org/x/tools/gopls"
+go "honnef.co/go/tools/cmd/staticcheck"
