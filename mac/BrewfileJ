@@ -30,22 +30,24 @@ brew "kubectx"
 brew "libpq"
 # Mac App Store command-line interface
 brew "mas"
+# Protocol buffers (Google's data interchange format)
+brew "protobuf"
 # Open source relational database management system
 brew "mysql"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node"
 # Manage multiple Node.js versions
 brew "nvm"
-# Generate clients, server & docs from an OpenAPI spec (v2, v3)
-brew "openapi-generator"
 # Development kit for the Java programming language
 brew "openjdk"
+# Generate clients, server & docs from an OpenAPI spec (v2, v3)
+brew "openapi-generator"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
 # Object-relational database system
 brew "postgresql@14"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
-# Protocol buffers (Google's data interchange format)
-brew "protobuf"
 # C parser in Python
 brew "pycparser"
 # Python version management
@@ -54,6 +56,8 @@ brew "pyenv"
 brew "recode"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# CLI for managing and maintaining data graphs with Apollo Studio
+brew "rover"
 # Powerful, clean, object-oriented scripting language
 brew "ruby"
 # Rust toolchain installer
@@ -140,6 +144,8 @@ cask "vip-access"
 cask "visual-studio-code"
 # Multiplayer code editor
 cask "zed"
+# Gecko based web browser
+cask "zen"
 vscode "aaron-bond.better-comments"
 vscode "bierner.markdown-mermaid"
 vscode "bpruitt-goddard.mermaid-markdown-syntax-highlighting"
@@ -147,6 +153,8 @@ vscode "donjayamanne.githistory"
 vscode "editorconfig.editorconfig"
 vscode "esbenp.prettier-vscode"
 vscode "fabianlauer.vs-code-xml-format"
+vscode "github.copilot"
+vscode "github.copilot-chat"
 vscode "graphql.vscode-graphql"
 vscode "graphql.vscode-graphql-syntax"
 vscode "hashicorp.terraform"

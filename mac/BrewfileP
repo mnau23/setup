@@ -15,9 +15,11 @@ brew "go"
 brew "jq"
 # Mac App Store command-line interface
 brew "mas"
+# Protocol buffers (Google's data interchange format)
+brew "protobuf"
 # Open source relational database management system
 brew "mysql"
-# Platform built on V8 to build network applications
+# Open-source, cross-platform JavaScript runtime environment
 brew "node"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
@@ -25,8 +27,6 @@ brew "pkgconf"
 brew "postgresql@15", link: true
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
-# Protocol buffers (Google's data interchange format)
-brew "protobuf"
 # Python version management
 brew "pyenv"
 # Search tool like grep and The Silver Searcher
@@ -122,11 +122,14 @@ cask "zen"
 # Video communication and virtual meeting platform
 cask "zoom"
 mas "iMovie", id: 408981434
+vscode "astro-build.astro-vscode"
 vscode "cardinal90.multi-cursor-case-preserve"
 vscode "docker.docker"
 vscode "donjayamanne.githistory"
 vscode "editorconfig.editorconfig"
 vscode "esbenp.prettier-vscode"
+vscode "github.copilot"
+vscode "github.copilot-chat"
 vscode "glenn2223.live-sass"
 vscode "golang.go"
 vscode "ms-azuretools.vscode-containers"

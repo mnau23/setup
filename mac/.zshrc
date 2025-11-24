@@ -178,6 +178,15 @@ function tagReleaseToProd() {
 }
 alias bringmetolife=tagReleaseToProd
 
+# Create git branch from URL (works for Jira tickets)
+## eg: gbu <url>
+function createGitBranchFromUrl() {
+  id=$(basename "$1")
+  branch_name="${id:l}"
+  git checkout -b $branch_name
+}
+alias gbu=createGitBranchFromUrl
+
 #####
 
 # Show encoded secret as json
