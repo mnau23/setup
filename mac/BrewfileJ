@@ -96,8 +96,6 @@ cask "firefox"
 cask "hex-fiend"
 # Utility to hide menu bar items
 cask "hiddenbar"
-# IDE for Java development - community edition
-cask "intellij-idea-ce"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # Cloud credentials manager
@@ -122,8 +120,8 @@ cask "notion"
 cask "obsidian"
 # Collaboration platform for API development
 cask "postman"
-# IDE for Python programming - Community Edition
-cask "pycharm-ce"
+# IDE for professional Python development
+cask "pycharm"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # Rust IDE
@@ -164,3 +162,9 @@ vscode "redhat.vscode-yaml"
 vscode "rust-lang.rust-analyzer"
 vscode "shd101wyy.markdown-preview-enhanced"
 vscode "waderyan.gitblame"
+cargo "cargo-audit"
+cargo "cargo-px"
+cargo "cargo-shear"
+cargo "cargo-sort"
+cargo "diesel_cli"
+cargo "diesel_cli_ext"
