@@ -1,0 +1,5 @@
+# use AMD64 architecture for Docker containers (required on Apple Silicon Macs)
+--container-architecture linux/amd64
+
+# Load env variables and secrets from .env file (instead of .secrets)
+--secret-file .env

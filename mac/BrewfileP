@@ -1,4 +1,6 @@
 tap "coursier/formulas"
+# Run your GitHub Actions locally
+brew "act"
 # General-purpose data compression with high compression ratio
 brew "xz"
 # Shell script to build fancy DMGs
@@ -103,6 +105,8 @@ cask "slack"
 cask "spotify"
 # Free, open-source, and completely encrypted notes app
 cask "standard-notes"
+# System monitor for the menu bar
+cask "stats"
 # Messaging app with a focus on speed and security
 cask "telegram"
 # JDK from the Eclipse Foundation (Adoptium)
@@ -154,6 +158,7 @@ cargo "cargo-sort"
 cargo "cargo-tarpaulin"
 cargo "diesel_cli"
 cargo "diesel_cli_ext"
+cargo "dotenv-linter"
 cargo "git-cliff"
 cargo "lychee"
 cargo "mdbook"

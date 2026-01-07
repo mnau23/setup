@@ -1,15 +1,23 @@
+[alias]
+	cam = commit -am
+	psf = push --force-with-lease
+[commit]
+	gpgsign = true
 [core]
-    autocrlf = input # ensure line endings in files you checkout are correct for macOS
-    editor = vim
+	autocrlf = input # ensure line endings in files you checkout are correct for macOS
+	editor = vim
     excludesfile = /Users/<USER>/.gitignore_global
 [credential]
-    helper = osxkeychain
+	helper = osxkeychain
+[gpg]
+	format = ssh
 [init]
-    defaultBranch = main
+	defaultBranch = main
 [pull]
-    rebase = true
+	rebase = true
 [push]
-    autoSetupRemote = true
+	autoSetupRemote = true
 [user]
-    email = <EMAIL>
-    name = <USERNAME>
+	email = <EMAIL>
+	name = <USERNAME>
+	signingkey = /Users/<USER>/.ssh/id_ed25519.pub
