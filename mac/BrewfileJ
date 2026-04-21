@@ -83,12 +83,14 @@ brew "hashicorp/tap/terraform"
 brew "int128/kubelogin/kubelogin"
 # Install Leapp CLI
 brew "noovolari/brew/leapp-cli-darwin-arm64"
-# Pulumi - Modern Infrastructure as Code. Any cloud, any language 
+# Pulumi - Modern Infrastructure as Code. Any cloud, any language
 brew "pulumi/tap/pulumi"
 # Open source IDE for exploring and testing APIs
 cask "bruno"
 # Workflow and Decision Automation Platform
 cask "camunda-modeler"
+# OpenAI's coding agent that runs in your terminal
+cask "codex"
 # Universal database tool and SQL client
 cask "dbeaver-community"
 # App to build and share containerised applications and microservices
@@ -171,3 +173,4 @@ cargo "cargo-shear"
 cargo "cargo-sort"
 cargo "diesel_cli"
 cargo "diesel_cli_ext"
+krew "neat"

@@ -57,6 +57,8 @@ cask "brave-browser"
 cask "bruno"
 # E-books management software
 cask "calibre"
+# OpenAI's coding agent that runs in your terminal
+cask "codex"
 # Universal database tool and SQL client
 cask "dbeaver-community"
 # App to build and share containerised applications and microservices
@@ -163,3 +165,4 @@ cargo "git-cliff"
 cargo "lychee"
 cargo "mdbook"
 cargo "typos-cli"
+cargo "zizmor"
