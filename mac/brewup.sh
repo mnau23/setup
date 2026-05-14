@@ -1,4 +1,6 @@
 #!/bin/bash
+# NOTE: currently not used - substituted with `homebrewUpdater` in `.zshrc`.
+
 
 TEXTCOLOR='\033[1;34m'
 
@@ -10,13 +12,13 @@ brew update
 printf "${TEXTCOLOR}Upgrading outdated packages...\n"
 brew upgrade
 
-# Cleanup
-printf "${TEXTCOLOR}Cleaning cache...\n"
-brew cleanup
-
 # Upgrade casks
 printf "${TEXTCOLOR}Upgrading casks...\n"
 brew upgrade --cask --greedy
+
+# Cleanup
+printf "${TEXTCOLOR}Cleaning cache...\n"
+brew cleanup
 
 # Check
 printf "${TEXTCOLOR}Checking for problems...\n"

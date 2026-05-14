@@ -120,6 +120,19 @@ function backupObsidianVaultToGithub() {
 }
 alias obsidian-backup=backupObsidianVaultToGithub
 
+# Find Codex sessions for a project
+## eg: cxs /path/to/project
+function findCodexSessionForProject() {
+  local project_path="${1:-$PWD}"
+  echo "Searching Codex sessions for: $project_path\n" >&2
+
+  find "${CODEX_HOME:-$HOME/.codex}/sessions" -name '*.jsonl' -print0 \
+    | xargs -0 rg -l "\"cwd\":\"$project_path\""
+  
+  echo "\nTip: the session ID is the last dash-separated chunk in the filename (rollout-...-<SESSION_ID>.jsonl). Resume with: codex resume <SESSION_ID>" >&2
+}
+alias cxs=findCodexSessionForProject
+
 # Switch between different Java versions
 ## eg: jdk <version_number>
 function setJdkVersion() {
