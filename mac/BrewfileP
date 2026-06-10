@@ -25,6 +25,8 @@ brew "protobuf"
 brew "mysql"
 # Open-source, cross-platform JavaScript runtime environment
 brew "node"
+# Generate clients, server & docs from an OpenAPI spec (v2, v3)
+brew "openapi-generator"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
 # Object-relational database system
@@ -138,7 +140,6 @@ vscode "docker.docker"
 vscode "donjayamanne.githistory"
 vscode "editorconfig.editorconfig"
 vscode "esbenp.prettier-vscode"
-vscode "github.copilot-chat"
 vscode "glenn2223.live-sass"
 vscode "golang.go"
 vscode "ms-azuretools.vscode-containers"
@@ -166,3 +167,6 @@ cargo "lychee"
 cargo "mdbook"
 cargo "typos-cli"
 cargo "zizmor"
+npm "corepack"
+npm "live-server"
+npm "sass-migrator"
