@@ -1,4 +1,4 @@
-tap "coursier/formulas"
+tap "coursier/formulas", trusted: true
 # Run your GitHub Actions locally
 brew "act"
 # Shell script to build fancy DMGs
@@ -17,6 +17,8 @@ brew "go"
 brew "jq"
 # General-purpose data compression with high compression ratio
 brew "xz"
+# TIFF library and utilities
+brew "libtiff"
 # Mac App Store command-line interface
 brew "mas"
 # Protocol buffers (Google's data interchange format)
@@ -41,6 +43,8 @@ brew "ripgrep"
 brew "sbt"
 # Tool Command Language
 brew "tcl-tk@8"
+# Microsoft MS-TNEF attachment unpacker
+brew "tnef"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Extremely fast Python package installer and resolver, written in Rust
@@ -163,6 +167,7 @@ cargo "diesel_cli"
 cargo "diesel_cli_ext"
 cargo "dotenv-linter"
 cargo "git-cliff"
+cargo "just"
 cargo "lychee"
 cargo "mdbook"
 cargo "typos-cli"

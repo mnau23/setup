@@ -1,12 +1,8 @@
-tap "auth0/auth0-cli"
-tap "cargo-lambda/cargo-lambda"
-tap "codefresh-io/cli"
-tap "coursier/formulas"
-tap "hashicorp/tap"
-tap "int128/kubelogin"
-tap "mongodb/brew"
-tap "noovolari/brew"
-tap "pulumi/tap"
+tap "auth0/auth0-cli", trusted: true
+tap "hashicorp/tap", trusted: true
+tap "int128/kubelogin", trusted: true
+tap "noovolari/brew", trusted: true
+tap "pulumi/tap", trusted: true
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
 # Official Amazon AWS command-line interface
@@ -45,8 +41,6 @@ brew "openjdk"
 brew "openapi-generator"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
-# Object-relational database system
-brew "postgresql@14"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
 # C parser in Python
@@ -59,8 +53,6 @@ brew "recode"
 brew "ripgrep"
 # CLI for managing and maintaining data graphs with Apollo Studio
 brew "rover"
-# Powerful, clean, object-oriented scripting language
-brew "ruby"
 # Rust toolchain installer
 brew "rustup"
 # Build tool for Scala projects
@@ -71,12 +63,6 @@ brew "watch"
 brew "zbctl"
 # Build, manage and test your Auth0 integrations from the command line
 brew "auth0/auth0-cli/auth0"
-# Cargo Lambda is a Cargo subcommand to help you work with AWS Lambda.
-brew "cargo-lambda/cargo-lambda/cargo-lambda"
-# Codefresh CLI provides a full and flexible interface to interact with Codefresh.
-brew "codefresh-io/cli/codefresh"
-# Launcher for Coursier
-brew "coursier/formulas/coursier"
 # Terraform
 brew "hashicorp/tap/terraform"
 # A kubectl plugin for Kubernetes OpenID Connect authentication
