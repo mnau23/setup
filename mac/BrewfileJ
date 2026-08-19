@@ -115,8 +115,6 @@ cask "pycharm"
 cask "rectangle"
 # Rust IDE
 cask "rustrover"
-# Team communication and collaboration software
-cask "slack"
 # Music streaming service
 cask "spotify"
 # JDK from the Eclipse Foundation (Adoptium)
@@ -131,8 +129,6 @@ cask "vip-access"
 cask "visual-studio-code"
 # Multiplayer code editor
 cask "zed"
-# Gecko based web browser
-cask "zen"
 # Video communication and virtual meeting platform
 cask "zoom"
 vscode "aaron-bond.better-comments"

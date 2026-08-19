@@ -5,6 +5,8 @@ brew "act"
 brew "create-dmg"
 # Perl lib for reading and writing EXIF metadata
 brew "exiftool"
+# General-purpose data compression with high compression ratio
+brew "xz"
 # Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
 # Distributed revision control system
@@ -13,10 +15,10 @@ brew "git"
 brew "git-filter-repo"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Configurable static site generator
+brew "hugo"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
-# General-purpose data compression with high compression ratio
-brew "xz"
 # TIFF library and utilities
 brew "libtiff"
 # Mac App Store command-line interface
