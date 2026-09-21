@@ -1,4 +1,3 @@
-tap "coursier/formulas", trusted: true
 # Run your GitHub Actions locally
 brew "act"
 # Shell script to build fancy DMGs
@@ -41,8 +40,6 @@ brew "pre-commit"
 brew "pyenv"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# Build tool for Scala projects
-brew "sbt"
 # Tool Command Language
 brew "tcl-tk@8"
 # Microsoft MS-TNEF attachment unpacker
@@ -53,8 +50,6 @@ brew "tree"
 brew "uv"
 # Vi 'workalike' with many additional features
 brew "vim"
-# Launcher for Coursier
-brew "coursier/formulas/coursier"
 # Menu bar tool to limit maximum charging percentage
 cask "aldente"
 # Chromium based browser
