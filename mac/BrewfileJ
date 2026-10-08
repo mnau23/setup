@@ -4,7 +4,7 @@ tap "int128/kubelogin", trusted: true
 tap "noovolari/brew", trusted: true
 tap "pulumi/tap", trusted: true
 # Cryptography and SSL/TLS Toolkit
-brew "openssl@3"
+brew "openssl@3", link: true
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Distributed revision control system
@@ -23,6 +23,8 @@ brew "krew"
 brew "kube-ps1"
 # Tool that can switch between kubectl contexts easily and create aliases
 brew "kubectx"
+# Cloud credentials manager cli
+brew "leapp-cli"
 # Postgres C API library
 brew "libpq"
 # Mac App Store command-line interface
@@ -83,8 +85,6 @@ cask "dbeaver-community"
 cask "docker-desktop"
 # Hex editor focussing on speed
 cask "hex-fiend"
-# Utility to hide menu bar items
-cask "hiddenbar"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # Cloud credentials manager
@@ -105,8 +105,6 @@ cask "microsoft-teams"
 cask "mockoon"
 # App to write, plan, collaborate, and get organised
 cask "notion"
-# Knowledge base that works on top of a local folder of plain text Markdown files
-cask "obsidian"
 # Collaboration platform for API development
 cask "postman"
 # IDE for professional Python development
@@ -117,10 +115,6 @@ cask "rectangle"
 cask "rustrover"
 # Music streaming service
 cask "spotify"
-# JDK from the Eclipse Foundation (Adoptium)
-cask "temurin11"
-# JDK from the Eclipse Foundation (Adoptium)
-cask "temurin8"
 # Unpacks archive files
 cask "the-unarchiver"
 # Two-step authentication software
@@ -129,8 +123,6 @@ cask "vip-access"
 cask "visual-studio-code"
 # Multiplayer code editor
 cask "zed"
-# Video communication and virtual meeting platform
-cask "zoom"
 vscode "aaron-bond.better-comments"
 vscode "bierner.markdown-mermaid"
 vscode "bpruitt-goddard.mermaid-markdown-syntax-highlighting"
