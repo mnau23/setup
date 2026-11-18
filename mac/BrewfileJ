@@ -4,7 +4,7 @@ tap "int128/kubelogin", trusted: true
 tap "noovolari/brew", trusted: true
 tap "pulumi/tap", trusted: true
 # Cryptography and SSL/TLS Toolkit
-brew "openssl@3", link: true
+brew "openssl@3"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Distributed revision control system
@@ -59,6 +59,8 @@ brew "rover"
 brew "rustup"
 # Build tool for Scala projects
 brew "sbt"
+# User interface to the TELNET protocol
+brew "telnet"
 # Executes a program periodically, showing output fullscreen
 brew "watch"
 # Zeebe CLI client
@@ -71,7 +73,7 @@ brew "hashicorp/tap/terraform"
 brew "int128/kubelogin/kubelogin"
 # Install Leapp CLI
 brew "noovolari/brew/leapp-cli-darwin-arm64"
-# Pulumi - Modern Infrastructure as Code. Any cloud, any language
+# Pulumi - Modern Infrastructure as Code. Any cloud, any language 
 brew "pulumi/tap/pulumi"
 # Open source IDE for exploring and testing APIs
 cask "bruno"

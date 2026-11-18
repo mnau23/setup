@@ -52,8 +52,6 @@ brew "uv"
 brew "vim"
 # Menu bar tool to limit maximum charging percentage
 cask "aldente"
-# Chromium based browser
-cask "arc"
 # Web browser focusing on privacy
 cask "brave-browser"
 # Open source IDE for exploring and testing APIs
@@ -92,8 +90,6 @@ cask "notion"
 cask "obsidian"
 # VPN client focusing on security
 cask "protonvpn"
-# IDE for professional Python development
-cask "pycharm"
 # Peer to peer Bitorrent client
 cask "qbittorrent"
 # Move and resize windows using keyboard shortcuts or snap areas
@@ -139,9 +135,11 @@ vscode "docker.docker"
 vscode "donjayamanne.githistory"
 vscode "editorconfig.editorconfig"
 vscode "esbenp.prettier-vscode"
+vscode "fill-labs.dependi"
 vscode "github.vscode-github-actions"
 vscode "glenn2223.live-sass"
 vscode "golang.go"
+vscode "hashicorp.terraform"
 vscode "ms-azuretools.vscode-containers"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-python.debugpy"
@@ -151,6 +149,7 @@ vscode "ms-python.vscode-python-envs"
 vscode "nefrob.vscode-just-syntax"
 vscode "redhat.vscode-yaml"
 vscode "ritwickdey.liveserver"
+vscode "rust-lang.rust-analyzer"
 vscode "shd101wyy.markdown-preview-enhanced"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "waderyan.gitblame"
